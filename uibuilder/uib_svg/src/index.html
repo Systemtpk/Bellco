@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>uibuilder SVG example</title>
+    <meta name="description" content="Node-RED uibuilder - Simple example using VueJS">
+
+    <link rel="icon" href="./images/node-blue.ico">
+
+    <!-- Put your own custom styles in here -->
+    <link rel="stylesheet" href="./index.css" media="all">
+
+</head><body>
+    
+    <!-- The "app" element is where the code for dynamic updates is attached -->
+	<div id="app" :style="appStyle">
+	  
+	  <svg width="100%" height="100%" viewBox="0 0 1000 1000">
+         <g>
+            <circle cx="333" cy="500" :r="circleRadius" stroke="black" 
+            stroke-width="3" :fill="circleFill" />
+            <rect :style="squareStyle"/>
+            <polygon transform='translate(500 400)' :style="triangleStyle" points="0,200 100,0 200,200" />
+         </g> 
+      </svg>
+	  
+	</div>
+
+    <!-- Vendor Libraries - Load in the right order -->
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>
+
+    <!-- REQUIRED: Sets up Socket listeners, the uibuilder and msg objects -->
+    <script src="./uibuilderfe.min.js"></script>
+
+    <!-- Put your own custom code in here -->
+    <script src="./index.js"></script>
+
+</body></html>
