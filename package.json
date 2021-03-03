@@ -1,0 +1,12 @@
+{
+    "name": "Bellco",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "node-red": {
+        "settings": {
+            "flowFile": "flows_DESKTOP-37NTT6K.json",
+            "credentialsFile": "flows_DESKTOP-37NTT6K_cred.json"
+        }
+    }
+}
